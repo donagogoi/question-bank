@@ -9,6 +9,7 @@ if(isset($_POST['submit'])){
 
 	$username = addslashes(strip_tags(trim($_POST['username'])));
 	$password = addslashes(strip_tags(trim($_POST['password'])));
+	$password = md5($password);
 
 	$q = "SELECT * FROM login WHERE username=:username AND password=:password AND active='1'";
 	$stmt = $core->dbh->prepare($q);
@@ -24,7 +25,7 @@ if(isset($_POST['submit'])){
 		$_SESSION['username'] = $result->username;
 		$error = "Successfully logged in: ".$_SESSION['username'];
 		// redirect to dashboard
-
+		echo "<script>window.location.href='http://localhost/question-bank/';</script>";
 
 	}else{
 			// wrong username and password
@@ -37,7 +38,7 @@ if(isset($_POST['submit'])){
 <div class="container">
 	<div style="display: flex; align-items: center; justify-content: center; height: 90vh">
 		<form method="post">
-			<h4>Admin Login <?php echo $_SESSION['username']; ?></h4>
+			<h4>Admin Login</h4>
 			<?php if($error != ""){
 				?>
 				<div class="alert alert-danger">
@@ -58,8 +59,8 @@ if(isset($_POST['submit'])){
 			</div>
 
 			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-			<a><button type="submit" class="btn ">Signup</button></a>
-			<a href="connection/logout.php"><button type="submit" class="btn ">Logout</button></a>
+			<a href="admin_signup.php"><button type="submit" class="btn ">Signup</button></a>
+			
 		</form>
 	</div>
 </div>

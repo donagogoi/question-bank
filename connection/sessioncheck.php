@@ -7,32 +7,15 @@ if(!isset($_SESSION)){
 
 
 }else{
-
- 
-	 
-
-$user_category='';
-if(isset($_SESSION['category']))
+if(isset($_SESSION['user_id']))
 {
 	
 
-	$user_category=$_SESSION['category'];
-	if($user_category=='admin')
-	{
-		$username=$_SESSION['admin'];
-		/*echo $username;*/
-		 
-
-	}
-	else if($user_category=='user')
-	{
-		$username=$_SESSION['user'];
-		 
-	}
+	// all okay
 	 
 }
 
-else if(!isset($_SESSION['category']))
+else if(!isset($_SESSION['user_id']))
 {
 header('location:index.php');
 }
