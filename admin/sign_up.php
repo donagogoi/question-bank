@@ -69,11 +69,7 @@ if(isset($_POST['submit'])){
 				<?php 
 				}
 
-				// add email address
-				// add teacher name
-				// add teacher id
-				// add password
-				// add confirmpassword
+				
 				?>
 
 			<div class="form-group">
@@ -99,7 +95,7 @@ if(isset($_POST['submit'])){
 			</div>
 
 			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-			<a><button type="submit" class="btn ">Signup</button></a>
+			
 			
 		</form>
 	</div>

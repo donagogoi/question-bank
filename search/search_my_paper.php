@@ -66,7 +66,8 @@
 				<td width="30%">Paper Name</td>
 				<td width="15%">Degree</td>
 				<td width="10%">Paper Type</td>
-				<td width="10%">Years</td>
+				<td width="10%">Year</td>
+				<td width="10%">View File</td>
 
 			</tr>
 		</thead>
@@ -87,6 +88,7 @@
 						<td><?php echo $row->degree_name; ?></td>
 						<td><?php echo $row->course_type; ?></td>
 						<td><?php echo $row->year; ?></td>
+						<td><a target="_blank" href="<?php echo $row->file; ?>">View File</a></td>
 						
 					</tr>
 					<?php 

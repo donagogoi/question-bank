@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 <div class="container">
 	<div style="display: flex; align-items: center; justify-content: center; height: 90vh">
 		<form method="post">
-			<h4>Admin Login</h4>
+			<h4>Login here</h4>
 			<?php if($error != ""){
 				?>
 				<div class="alert alert-danger">
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 			</div>
 
 			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
-			<a href="admin_signup.php"><button type="submit" class="btn ">Signup</button></a>
+			
 			
 		</form>
 	</div>

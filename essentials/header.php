@@ -54,7 +54,8 @@
 <?php
       }else{
     ?>
-    <a href="admin_login.php"><button class="btn" >Admin Login</button></a>
+    <a href="admin_signup.php"><button class="btn" >Signup</button></a>
+    <a href="admin_login.php"><button class="btn" >Login</button></a>
   <?php } ?>
   </div>
 </nav>
